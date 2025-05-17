@@ -1,0 +1,11 @@
+[package]
+name = "plat"
+version = "0.1.0"
+edition = "2024"
+description = "Platform aliases."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/vladasz/plat"
+
+
+[dependencies]
+cfg_aliases = "0.2"

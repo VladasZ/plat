@@ -7,6 +7,7 @@ impl Platform {
     pub const ANDROID: bool = cfg!(target_os = "android");
     pub const MOBILE: bool = Self::IOS || Self::ANDROID;
     pub const DESKTOP: bool = !Self::MOBILE;
+    pub const WASM: bool = cfg!(target_arch = "wasm32");
 }
 
 impl Platform {
@@ -17,11 +18,14 @@ impl Platform {
         dbg!(Self::ANDROID);
         dbg!(Self::MOBILE);
         dbg!(Self::DESKTOP);
+        dbg!(Self::WASM);
     }
 }
 
 pub fn platforms() {
     cfg_aliases::cfg_aliases! {
+        wasm:    { target_arch = "wasm32" },
+
         android: { target_os = "android" },
         ios:     { target_os = "ios" },
 

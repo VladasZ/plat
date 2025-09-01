@@ -24,7 +24,8 @@ impl Platform {
 
 pub fn platforms() {
     cfg_aliases::cfg_aliases! {
-        wasm:    { target_arch = "wasm32" },
+        wasm:     {     target_arch = "wasm32"  },
+        not_wasm: { not(target_arch = "wasm32") },
 
         android: { target_os = "android" },
         ios:     { target_os = "ios" },

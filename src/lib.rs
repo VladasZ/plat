@@ -27,16 +27,17 @@ pub fn platforms() {
         wasm:     {     target_arch = "wasm32"  },
         not_wasm: { not(target_arch = "wasm32") },
 
-        android: { target_os = "android" },
-        ios:     { target_os = "ios" },
+        android:     {     target_os = "android"  },
+        not_android: { not(target_os = "android") },
+
+        ios:     {     target_os = "ios"  },
+        not_ios: { not(target_os = "ios") },
 
         macos:   { target_os = "macos" },
         linux:   { target_os = "linux" },
 
         mobile:  { any(    target_os = "android", target_os = "ios")  },
         desktop: { not(any(target_os = "android", target_os = "ios")) },
-
-        not_android: { not(target_os = "android") },
     }
 }
 

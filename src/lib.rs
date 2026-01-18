@@ -3,6 +3,7 @@ pub struct Platform;
 impl Platform {
     pub const MAC: bool = cfg!(target_os = "macos");
     pub const WIN: bool = cfg!(target_os = "windows");
+    pub const LINUX: bool = cfg!(target_os = "linux");
     pub const IOS: bool = cfg!(target_os = "ios");
     pub const ANDROID: bool = cfg!(target_os = "android");
     pub const MOBILE: bool = Self::IOS || Self::ANDROID;
@@ -14,6 +15,7 @@ impl Platform {
     pub fn dump() {
         dbg!(Self::MAC);
         dbg!(Self::WIN);
+        dbg!(Self::LINUX);
         dbg!(Self::IOS);
         dbg!(Self::ANDROID);
         dbg!(Self::MOBILE);

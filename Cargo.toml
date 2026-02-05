@@ -1,10 +1,11 @@
+
 [package]
-name = "plat"
-version = "0.6.0"
-edition = "2024"
 description = "Platform aliases."
+edition = "2024"
 license = "MIT OR Apache-2.0"
+name = "plat"
 repository = "https://github.com/vladasz/plat"
+version = "0.7.0"
 
 
 [dependencies]

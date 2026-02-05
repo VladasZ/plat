@@ -37,7 +37,7 @@ pub fn platforms() {
 
         macos:   { target_os = "macos" },
         linux:   { target_os = "linux" },
-        windows: { target_os = "windows" },
+        win:     { target_os = "windows" },
 
         desktop: { any(target_os =   "macos", target_os = "linux", target_os = "windows") },
         mobile:  { any(target_os = "android", target_os =   "ios"                       ) },

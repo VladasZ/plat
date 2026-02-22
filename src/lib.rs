@@ -9,6 +9,8 @@ impl Platform {
     pub const DESKTOP: bool = Self::MAC || Self::LINUX || Self::WINDOWS;
     pub const MOBILE: bool = Self::IOS || Self::ANDROID;
     pub const WASM: bool = cfg!(target_arch = "wasm32");
+
+    pub const APPLE: bool = Self::MAC || Self::IOS;
 }
 
 impl Platform {
@@ -21,6 +23,8 @@ impl Platform {
         dbg!(Self::DESKTOP);
         dbg!(Self::MOBILE);
         dbg!(Self::WASM);
+
+        dbg!(Self::APPLE);
     }
 }
 
@@ -41,6 +45,8 @@ pub fn platforms() {
 
         desktop: { any(target_os =   "macos", target_os = "linux", target_os = "windows") },
         mobile:  { any(target_os = "android", target_os =   "ios"                       ) },
+
+        apple:   { any(target_os = "macos", target_os = "ios") }
     }
 }
 
